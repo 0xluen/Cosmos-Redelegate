@@ -9,7 +9,7 @@ while true; do
 
   if (( $(echo "$result > 2" |bc -l) )); then
     /usr/bin/expect <<EOD
-    spawn tenetd tx distribution withdraw-rewards <ValoperAddress> --from=<WalletName>  --commission --chain-id=<ChainId>--gas-adjustment=1.5  --fees=44659140000000000atenet
+    spawn tenetd tx distribution withdraw-rewards <ValoperAddress> --from=<WalletName>  --commission --chain-id=<ChainId> --gas-adjustment=1.5  --fees=44659140000000000atenet
 
     expect "Enter keyring passphrase:"
     send "<Password>\r"
